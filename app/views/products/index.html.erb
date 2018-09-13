@@ -1,12 +1,12 @@
 <h1>這是前台首頁</h1>
 
-<div class="xxx">
-  <div class="xxxx">
+<div class="container">
+  <div class="row">
     
     <% @products.each do |product| %>
-      <div class="xxxx">
-        <div class="xxxx">
-          <%= image_tag product.image, class: "xxxx" %>
+      <div class="col-sm-6 col-md-4">
+        <div class="product-item">
+          <%= image_tag product.image.url, class: "img-responsive center-block" %>
           <div class="caption">
             <h3><%= link_to product.title, product_path(product) %></h3>
           </div>

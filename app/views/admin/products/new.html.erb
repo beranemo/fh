@@ -1,12 +1,13 @@
 <%= form_for  [:admin, @product] do |f| %>
   <%= f.label :title, "Title" %>
   <%= f.text_field :title %>
-
+  <br>
   <%= f.label :price, "Price" %>
   <%= f.text_field :price %>
-
-  <%= f.label :image, "Image" %>
-  <%= f.text_field :image %>
-
+  <br>
+  <%= f.label :image, "Photo" %>
+  <%= image_tag @product.image.url, width: '300px' if @product.image? %>
+  <%= f.file_field :image %> 
+  <br>
   <%= f.submit %>
 <% end %>
