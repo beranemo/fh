@@ -1,0 +1,16 @@
+<h1>這是後台</h1>
+<div>
+  <%= link_to '新增', new_admin_product_path %>
+</div>
+
+<ul>
+  <% @products.each do |product| %>
+  <li>
+    <%= product.title %>
+    <%= product.price %>
+    <%= link_to '內容', admin_product_path(product) %>
+    <%= link_to '編輯', edit_admin_product_path(product) %>
+    <%= link_to '刪除', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </li>
+  <% end %>
+</ul>
