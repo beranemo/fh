@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   resources :products, only: [:show, :index]
   
+  root 'products#index'
+  
   namespace :admin do
     resources :products
   end
