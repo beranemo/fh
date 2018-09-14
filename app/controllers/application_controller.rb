@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
       return @cart      
     end
     
-    cart = Cart.find_by(id: seesion[:cart_id])
+    cart = Cart.find_by(id: session[:cart_id])
     
     unless cart.present?
       cart = Cart.create
