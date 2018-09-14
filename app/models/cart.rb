@@ -27,5 +27,9 @@ class Cart < ApplicationRecord
     ci.save
   end
 
+  def total
+    self.cart_items.map(&:subtotal).sum
+  end
+
   
 end

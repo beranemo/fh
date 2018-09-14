@@ -13,4 +13,13 @@
 class CartItem < ApplicationRecord
   belongs_to :cart
   belongs_to :product
+  
+  def subtotal
+    if self.quantity != nil and self.quantity != ""
+      self.quantity * self.product.price
+    else
+      self.product.price
+    end
+  end
+
 end
