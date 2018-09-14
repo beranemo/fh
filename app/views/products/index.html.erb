@@ -1,8 +1,5 @@
-<h1>這是前台首頁</h1>
-
 <div class="container">
-  <div class="row">
-    
+  <div class="row">    
     <% @products.each do |product| %>
       <div class="col-sm-6 col-md-4">
         <%= link_to product_path(product) do %>
