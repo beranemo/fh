@@ -4,18 +4,19 @@
   </div>
   <table>
     <tr>
-      <th></th>
-      <th></th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th></th>
-      <th></th>
+      <th>商品</th>
+      <th>名稱</th>
+      <th>價錢</th>
+      <th>數量</th>
+      <th>小計</th>
     </tr>
     <% @items.each do |item| %>
       <tr class="product-<%= item.product.id %>">
         <td><%= image_tag item.product.image.url %></td>
         <td><%= item.product.title %></td>
         <td>$ <%= item.product.price %></td>
+        <td><%= item.quantity %></td>
+        <td><%=  %></td>
       </tr>
     <% end %>
     <tr>

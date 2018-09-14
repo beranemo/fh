@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: carts
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Cart < ApplicationRecord
   has_many :cart_items, dependent: :destroy # master 刪掉的話，detail 也會跟著刪除
   has_many :items, through: :cart_items, source: :product
