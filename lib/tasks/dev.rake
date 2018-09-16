@@ -1,7 +1,7 @@
 namespace :dev do
   task fake_products: :environment do
     Product.destroy_all
-    100.times do
+    20.times do
       Product.create!(
         title: FFaker::Name.first_name,
         price: ( rand(500)+1 ) * 10,
