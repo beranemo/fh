@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
   
   resource :cart
+  resources :orders
   
   root 'products#index'
   
