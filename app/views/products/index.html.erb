@@ -21,9 +21,12 @@
           <div class="container">
             <div class="vl-header-inner">
               <div class="vl-header-left">
-                <a href="index.html" class="vl-site-logo">
-                <img src="assets/img/logo.png" alt="Vinero" style="max-height: 13px"> 
-                </a>
+                <!-- <a href="index.html" class="vl-site-logo"> -->
+               <!--  <img src="assets/img/logo.png" alt="Vinero" style="max-height: 13px">  -->
+                
+      <%= link_to cart_path, class: "vl-site-logo" do  %>
+        購物車<i class="fa fa-shopping-cart"> </i> (<%= render_cart_items_count(current_cart) %>)
+      <% end %>  
               </div>
               <div class="vl-header-right">
                 <div class="vl-menu-toggle vl-fullscreen-menu-toggle" data-before-text="Menu">
