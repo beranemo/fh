@@ -6,13 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- FAVICON -->
-		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<!-- FONTS -->
-		<link rel="stylesheet" href="assets/fonts/fontawesome/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+		<link rel="stylesheet" href="app/assets/fonts/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" href="app/assets/fonts/iconsmind/iconsmind.css">
 		<!-- STYLESHEETS -->
-		<link rel="stylesheet" href="assets/css/plugins.min.css">
-		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="app/assets/css/plugins.min.css">
+		<link rel="stylesheet" href="app/assets/css/style.css">
 	</head>
 	<body>
 		<div class="vl-site-holder animsition vl-footer-fixed">
@@ -22,8 +22,11 @@
 						<div class="vl-header-inner">
 							<div class="vl-header-left">
 								<a href="index.html" class="vl-site-logo">
-								<img src="app/assets/images/logo.png" alt="Vinero" style="max-height: 13px"> 
+								<!--<img src="app/assets/images/logo.png" alt="Vinero" style="max-height: 13px"> -->
+								<%= image_tag("logo.png", style: "max-height: 13px")%>
 								</a>
+								
+
 							</div>
 							<div class="vl-header-right">
 								<div class="vl-menu-toggle vl-fullscreen-menu-toggle" data-before-text="Menu">
@@ -124,7 +127,7 @@
 							<article class="cbp-item vl-portfolio-grid-item vl-portfolio-style2 portfolio_category-photo">
 								<div class="vl-portfolio-grid-image">
 									<a class="vl-portfolio-grid-link" href="portfolio-single.html">
-									<img src="assets/img/portfolio/3.jpg" alt="">	
+									<img src="assets/images/portfolio/3.jpg" alt="">	
 									</a>
 								</div>
 								<div class="vl-portfolio-grid-content">
@@ -288,5 +291,5 @@
 			});
 		});
 	</script>
-	<script src="assets/scripts/script.js"></script>
+	<script src="app/assets/javascripts/script.js"></script>
 </html>
