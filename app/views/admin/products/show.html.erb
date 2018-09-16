@@ -1,0 +1,18 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-6">
+    <% if @product.image.url.present? %>
+      <%= image_tag(@product.image.url, class: "thumbnail") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <h2><%= @product.title %></h2>
+    <div><%= print_price @product.price %></div>
+    <div class="pull-right">
+      <%= link_to "回到後台編輯頁面", admin_products_path, class: "btn btn-primary btn-lg btn-danger" %>
+    </div>
+  </div>
+</div>
+</div>
