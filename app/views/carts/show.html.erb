@@ -9,6 +9,7 @@
       <th>價錢</th>
       <th>數量</th>
       <th>小計</th>
+      <th>功能</th>
     </tr>
     <% @items.each do |item| %>
       <tr class="product-<%= item.product.id %>">
@@ -17,6 +18,11 @@
         <td><%= print_price item.product.price %></td>
         <td><%= item.quantity %></td>
         <td><%= print_price item.subtotal %></td>
+        <th>
+        <%= button_to remove_from_cart_product_path(item.product) do %>
+          刪除
+        <% end %>
+        </th>
       </tr>
     <% end %>
     <tr></tr>
