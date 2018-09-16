@@ -16,7 +16,11 @@
         <td><%= image_tag item.product.image.url, class: "img-thumbnail" %></td>
         <td><%= item.product.title %></td>
         <td><%= print_price item.product.price %></td>
-        <td><%= item.quantity %></td>
+        <td>
+          <%= link_to '-', adjust_item_product_path(item.product, type: "substract"), method: :post %>
+          <%= item.quantity %>
+          <%= link_to '+', adjust_item_product_path(item.product, type: "add"), method: :post %>
+        </td>
         <td><%= print_price item.subtotal %></td>
         <th>
         <%= button_to remove_from_cart_product_path(item.product) do %>
