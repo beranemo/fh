@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'ffaker'
 
 
 # Reduces boot times through caching; required in config/boot.rb
