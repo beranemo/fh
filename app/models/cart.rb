@@ -31,5 +31,8 @@ class Cart < ApplicationRecord
     self.cart_items.map(&:subtotal).sum
   end
 
-  
+  def find_item_by(product)
+    self.cart_items.where(product_id: product).first
+  end
+
 end
