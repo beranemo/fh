@@ -1,4 +1,9 @@
 <div class="container">
+
+<% if current_cart.items.count == 0 %>
+  目前購物車數量為空
+<% else %>
+
 <section id="cart-list">
   <div>
     <h2>購買清單</h2>
@@ -54,3 +59,5 @@
   <%= f.submit "結帳", class: "btn" %>
 <% end %>
 </div>
+
+<% end %>
