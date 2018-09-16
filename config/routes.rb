@@ -21,9 +21,12 @@ Rails.application.routes.draw do
   resource :cart
   resources :orders
   
-  root 'products#index'
+#  root 'products#index'
   
   namespace :admin do
     resources :products
   end
+  
+  root 'pages#index'
+
 end
